@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: Cambria, sans-serif; */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 10px; /* Adjust the margin size as needed */
+}
+
+table {
+    width: 100%;
+}
+
+p {
+    font-size: small;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: square;
+    font-size: 14px;
+}
+
+.line-with-text {
+    margin: 10px; /* Margin around sub-headers */
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #000;
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+.text {
+    white-space: nowrap; /* Prevent text from wrapping */
+    /* font-family: American Typewriter, serif; */
+    font-weight: 600;
+}
+
+.header-left {
+    /* font-family: American Typewriter, serif; */
+    font-size: large;
+    text-align: left;
+    /* font-variant: small-caps; */
+    font-weight: bold;
+}
+
+.header-right {
+    /* font-family: American Typewriter, serif; */
+    font-size: large;
+    text-align: right;
+    font-weight: bold;
+}
+
+.column-left {
+    text-align: left;
+    /* font-family: 'Lucida Console', monospace; */
+}
+
+.column-right {
+    text-align: right;
+    /* font-family: 'Lucida Console', monospace; */
+}
+
+.title {
+    text-align: center;
+    font-weight: 500;
+    /* font-family: American Typewriter, serif; */
+    
+}
+
+.description {
+    /* font-family: 'Lucida Console', monospace; */
+}
+
+.name {
+    text-align: center;
+    /* font-family: Cambria, sans-serif; */
+    font-weight: lighter;
+    /* font-variant: small-caps; */
+    /* font-size: large; */
+    font-stretch: expanded;
+}
