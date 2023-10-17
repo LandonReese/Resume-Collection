@@ -1,0 +1,36 @@
+{% load static %}
+{% block content %}
+<style>
+    .piece {
+        text-align: center;
+    }
+</style>
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+    <h1 class="piece">Welcome to the Inventory App</h1>
+    <div class="piece">
+        <button onclick="goToStudents()">Students</button>
+        <button onclick="goToInstruments()">Instruments</button>
+        <button onclick="goToCheckout()">Checkout</button>
+    </div>
+
+    <script>
+        // Define JavaScript functions to route to URLs
+        function goToStudents() {
+            // Use JavaScript to navigate to the Students page
+            window.location.href = "{% url 'students:student_index' %}";
+        }
+    
+        function goToInstruments() {
+            // Use JavaScript to navigate to the Instruments page
+            window.location.href = "{% url 'instruments:instrument_index' %}";
+        }
+
+        function goToCheckout() {
+            // Use JavaScript to navigate to the Instruments page
+            window.location.href = "{% url 'checkout:checkout_index' %}";
+        }
+        
+    </script>
+{% endblock %}

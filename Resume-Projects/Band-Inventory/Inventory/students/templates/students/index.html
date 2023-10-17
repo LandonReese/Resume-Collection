@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Students</h1>
+    <a href="{% url 'students:add_student' %}">Add Student</a>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <button id="sort_by_id" onclick="sortTable('id')">ID</button>
+                </th>
+                <th>
+                    <button id="sort_by_first_name" onclick="sortTable('firstname')">First Name</button>
+                </th>
+                <th>
+                    <button id="sort_by_last_name" onclick="sortTable('lastname')">Last Name</button>
+                </th>
+                <th>
+                    <button id="sort_by_address" onclick="sortTable('address')">Address</button>
+                </th>
+                <th>
+                    <button id="sort_by_city" onclick="sortTable('city')">City</button>
+                </th>
+                <th>
+                    <button id="sort_by_state" onclick="sortTable('state')">State</button>
+                </th>
+                <th>
+                    <button id="sort_by_zip" onclick="sortTable('zip')">Zip</button>
+                </th>
+                <th>
+                    <button id="sort_by_phone" onclick="sortTable('phone')">Phone</button>
+                </th>
+                <th>
+                    <button id="sort_by_notes" onclick="sortTable('notes')">Notes</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td><a href="{% url 'students:view_student' student.id %}">{{ student.id }}</a></td>
+                    <td>{{ student.firstname }}</td>
+                    <td>{{ student.lastname }}</td>
+                    <td>{{ student.address }}</td>
+                    <td>{{ student.city }}</td>
+                    <td>{{ student.state }}</td>
+                    <td>{{ student.zip }}</td>
+                    <td>{{ student.phone }}</td>
+                    <td>{{ student.notes }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="9">No students available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        function sortTable(sortBy) {
+            var url = new URL(window.location.href);
+            var params = new URLSearchParams(url.search);
+
+            if (params.get('sort_by') === sortBy) {
+                // Toggle the reverse sorting order
+                params.set('reverse', params.get('reverse') === 'true' ? 'false' : 'true');
+            } else {
+                // Set the sorting attribute and default to ascending order
+                params.set('sort_by', sortBy);
+                params.set('reverse', 'false');
+            }
+
+            // Update the URL with the new parameters
+            window.location.href = '?' + params.toString();
+        }
+    </script>
+{% endblock %}

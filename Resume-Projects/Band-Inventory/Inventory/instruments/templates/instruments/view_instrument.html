@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Instrument Details</h1>
+    <a href="{% url 'instruments:edit_instrument' instrument.id %}">Edit</a>
+    <a href="{% url 'instruments:instrument_index' %}">Back to Instrument List</a>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Type:</th>
+            <td>{{ instrument.type }}</td>
+        </tr>
+        <tr>
+            <th>Serial Number:</th>
+            <td>{{ instrument.serial_num }}</td>
+        </tr>
+        <tr>
+            <th>Maker:</th>
+            <td>{{ instrument.maker }}</td>
+        </tr>
+        <tr>
+            <th>Notes:</th>
+            <td>{{ instrument.notes }}</td>
+        </tr>
+    </table>
+{% endblock %}

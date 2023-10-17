@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Instruments</h1>
+    <a href="{% url 'instruments:add_instrument' %}">Add Instrument</a>
+    <a href="{% url 'instruments:delete_index' %}">Delete Instrument</a>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <button id="sort_by_id" onclick="sortTable('id')">ID</button>
+                </th>
+                <th>
+                    <button id="sort_by_type" onclick="sortTable('type')">Type</button>
+                </th>
+                <th>
+                    <button id="sort_by_serial_num" onclick="sortTable('serial')">Serial Number</button>
+                </th>
+                <th>
+                    <button id="sort_by_maker" onclick="sortTable('maker')">Maker</button>
+                </th>
+                <th>
+                    <button id="sort_by_notes" onclick="sortTable('notes')">Notes</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for instrument in instruments %}
+                <tr>
+                    <td><a href="{% url 'instruments:view_instrument' instrument.id %}">{{ instrument.id }}</a></td>
+                    <td>{{ instrument.type }}</td>
+                    <td>{{ instrument.serial_num }}</td>
+                    <td>{{ instrument.maker }}</td>
+                    <td>{{ instrument.notes }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">No instruments available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        function sortTable(sortBy) {
+            var url = new URL(window.location.href);
+            var params = new URLSearchParams(url.search);
+
+            if (params.get('sort_by') === sortBy) {
+                // Toggle the reverse sorting order
+                params.set('reverse', params.get('reverse') === 'true' ? 'false' : 'true');
+            } else {
+                // Set the sorting attribute and default to ascending order
+                params.set('sort_by', sortBy);
+                params.set('reverse', 'false');
+            }
+
+            // Update the URL with the new parameters
+            window.location.href = '?' + params.toString();
+        }
+    </script>
+{% endblock %}

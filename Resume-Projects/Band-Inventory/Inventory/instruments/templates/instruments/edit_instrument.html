@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Edit Instrument</h1>
+    <a href="{% url 'instruments:view_instrument' instrument.id %}">View Details</a>
+    <a href="{% url 'instruments:instrument_index' %}">Back to Instrument List</a>
+{% endblock %}
+
+{% block content %}
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+    
+{% endblock %}

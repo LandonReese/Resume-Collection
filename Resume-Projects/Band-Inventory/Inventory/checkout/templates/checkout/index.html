@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Checkouts</h1>
+    <a href="{% url 'checkout:add_checkout' %}">Add Checkout</a>
+    <!-- Add other navigation links as needed -->
+{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student</th>
+                <th>Instrument</th>
+                <th>Notes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for checkout in checkouts %}
+                <tr>
+                    <td>{{ checkout.id }}</td>
+                    <td>{{ checkout.student.firstname }} {{ checkout.student.lastname }}</td>
+                    <td>{{ checkout.instrument.type }}</td>
+                    <td>{{ checkout.notes }}</td>
+                    <td>
+                        <a href="{% url 'checkout:view_checkout' checkout.id %}">View</a> |
+                        <a href="{% url 'checkout:edit_checkout' checkout.id %}">Edit</a>
+                        <!-- You can add a delete link if needed -->
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">No checkouts available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

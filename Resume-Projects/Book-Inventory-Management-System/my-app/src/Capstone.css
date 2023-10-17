@@ -1,0 +1,24 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	height: flex;
+}
+.header {
+	background-color: #333333;
+	color: #ffffff;
+	height: flex;
+}
+.upperMiddle {
+	background-color: #666666;
+    height: flex;
+	flex: 1;
+}
+.lowerMiddle {
+	background-color: #999999;
+	height: flex;
+	flex: 1;
+}
+.footer {
+	background-color: #cccccc;
+	height: flex;
+}

@@ -1,15 +1,89 @@
 <!DOCTYPE html>
 <html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        margin: 10px; /* Adjust the margin size as needed */
+    }
+
+    table {
+        width: 100%;
+    }
+
+    p {
+        font-size: small;
+    }
+
+    ul {
+        margin-left: 20px;
+        list-style-type: square;
+        font-size: 14px;
+    }
+
+    .line-with-text {
+        margin: 10px; /* Margin around sub-headers */
+        display: flex;
+        align-items: center;
+    }
+
+    .line {
+        flex-grow: 1;
+        height: 2px;
+        background-color: #000;
+        margin: 0 10px;
+    }
+
+    .text {
+        white-space: nowrap; /* Prevent text from wrapping */
+        font-weight: 600;
+    }
+
+    .header-left {
+        font-size: large;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .header-right {
+        font-size: large;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .column-left {
+        text-align: left;
+    }
+
+    .column-right {
+        text-align: right;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .description {
+        /* font-family: 'Lucida Console', monospace; */
+    }
+
+    .name {
+        text-align: center;
+        font-weight: lighter;
+        font-stretch: expanded;
+    }
+</style>
 <head>
     <link rel="stylesheet" href="ResumeStyles.css">
 </head>
 <body>
     <div class="name">
         <h1>Landon Reese</h1>
-    </div>
-
-    <div class="title">
-        <h4>Entry-level Software Developer</h4>
     </div>
 
     <div class="description">
@@ -65,42 +139,6 @@
     </div>
     
     <div class="description">
-        <!-- <p>Divide this section into Languages, Frameworks and Development Tools</p>
-        <p>
-            C, C++, C#, Java, JavaScript, Python, Django, Git, Linux, HTML, CSS, Node.js, 
-            React, Express, MongoDB, Assembly(MIPS 32), Jupyter Notebooks
-        </p>
-        <ul>
-            <li>
-                Programming Languages:
-                C, C++, C#, Java, JavaScript, Python, Assembly (MIPS 32)
-            </li>
-            <li>
-                Web Development:
-                HTML, CSS, JavaScript, Node.js, React, Express, Django
-            </li>
-            <li>
-                Version Control:
-                Git
-            </li>
-            <li>
-                Database:
-                MongoDB, SQL
-            </li>
-            <li>
-                Development Tools:
-                VSCode (Visual Studio Code), Xcode, IntelliJ
-            </li>
-            <li>
-                Operating Systems:
-                Linux, Windows OS, MacOS
-            </li>
-            <li>
-                Development Environments:
-                Jupyter Notebooks
-            </li>
-        </ul> -->
-
         <ul>
             <li>
                 <strong>Languages:</strong>
@@ -205,18 +243,3 @@
 
 </body>
 </html>
-
-
-<!-- 
-    Extra Code
-<div class="font1">
-    <h1>ABCDEFGHIJKLMNOPQRSTUVWXYZ 1</h1>
-    <h3>abcdefghijklmnopqrstuvwxyz 1</h3>
-</div>
-
-<div class="font2">
-    <h1>ABCDEFGHIJKLMNOPQRSTUVWXYZ 2</h1>
-    <h3>abcdefghijklmnopqrstuvwxyz 2</h3>
-</div>
-
--->

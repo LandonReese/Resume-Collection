@@ -1,0 +1,24 @@
+Here is a text file! Wecome kitty cat
+
+Sample commands to run:
+./pre < input.txt | ./sort > output.txt
+
+Sample commands:
+
+WORKS
+shhh>ls 
+
+WORKS
+shhh>ls -t -al
+
+WORKS
+shhh>cat file.txt   (file.txt is an existing file)
+
+WORKS
+shhh>ls -al > output.txt
+
+And then open output.txt to see if the content is correct or not
+
+shhh> ls | more | wc
+
+shhh>./pre < input.txt | ./sort > output.txt

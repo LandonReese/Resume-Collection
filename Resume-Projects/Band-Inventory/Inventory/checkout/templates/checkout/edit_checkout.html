@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Edit Checkout</h1>
+    <a href="{% url 'checkout:view_checkout' checkout.id %}">View Details</a>
+    <a href="{% url 'checkout:checkout_index' %}">Back to Checkout List</a>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        
+        <!-- Include form fields specific to the Checkout model -->
+        <div class="form-group">
+            <label for="{{ form.student.id_for_label }}">Student:</label>
+            {{ form.student }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.instrument.id_for_label }}">Instrument:</label>
+            {{ form.instrument }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.notes.id_for_label }}">Notes:</label>
+            {{ form.notes }}
+        </div>
+
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock %}

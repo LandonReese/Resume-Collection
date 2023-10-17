@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Checkout Details</h1>
+    <a href="{% url 'checkout:edit_checkout' checkout.id %}">Edit</a>
+    <a href="{% url 'checkout:checkout_index' %}">Back to Checkout List</a>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Student:</th>
+            <td>{{ checkout.student.firstname }} {{ checkout.student.lastname }}</td>
+        </tr>
+        <tr>
+            <th>Instrument:</th>
+            <td>{{ checkout.instrument.type }}</td>
+        </tr>
+        <tr>
+            <th>Notes:</th>
+            <td>{{ checkout.notes }}</td>
+        </tr>
+    </table>
+{% endblock %}

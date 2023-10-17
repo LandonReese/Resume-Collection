@@ -1,0 +1,74 @@
+/* Apply styles to main-container, top-left, and top-right */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Change background color to a darker shade */
+    color: #999; /* Change text color to white */
+    padding: 10px;
+}
+
+.top-left {
+    text-align: left;
+    flex: 1;
+}
+
+.top-right {
+    flex: 1;
+    text-align: right;
+}
+
+/* Update header styles */
+header {
+    text-align: center;
+    background-color: #222; /* Change background border of header to a darker shade */
+    padding: 10px;
+}
+
+/* Update table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #444; /* Darker border color */
+    background-color: #666; /* Darker background color */
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #444; /* Darker background color for header cells */
+}
+
+/* Update horizontal list styles */
+ul.horizontal-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul.horizontal-list li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    color: #fff; /* Dark grey color for links */
+    text-decoration: slateblue; /* Remove underlines from links if needed */
+}
+
+/* Change link color for visited links to a different dark grey shade */
+a:visited {
+    color: #ccc; /* Dark grey color for visited links */
+}
+
+/* Change link color for hover and active states */
+a:hover,
+a:active {
+    color: palevioletred; /* Dark grey color for links on hover and when clicked */
+}
+
+body {
+    background-color: #666; /* Light grey background color */
+}

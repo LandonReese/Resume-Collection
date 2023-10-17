@@ -1,0 +1,49 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inventory{% endblock %}</title>
+    <!-- Add your CSS links and scripts here -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+</head>
+<body>
+    <header>
+        <div class="main-container">
+            <div class="top-left">
+                <!-- Add content to the left column of the header -->
+                <div class="header-left">
+                    {% block header %}{% endblock %}
+                </div>
+            </div>
+            <div class="top-right">
+                <!-- Content in the right column of the header can be overridden by child templates -->
+                {% block header_right %}
+                    <h1>Inventory</h1>
+                    <nav>
+                        <ul class="horizontal-list">
+                            <li><a href="{% url 'instruments:home' %}">Home</a></li>
+                            <li><a href="{% url 'instruments:instrument_index' %}">Instruments</a></li>
+                            <li><a href="{% url 'students:student_index' %}">Students</a></li>
+                            <li><a href="{% url 'checkout:checkout_index' %}">Checkout</a></li>
+                            <!-- Add more navigation links as needed -->
+                        </ul>
+                    </nav>
+                {% endblock %}
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
+
+    <!-- Add your JavaScript scripts here -->
+</body>
+</html>

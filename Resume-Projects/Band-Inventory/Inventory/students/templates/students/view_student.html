@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Student Details</h1>
+    <a href="{% url 'students:edit_student' student.id %}">Edit</a>
+    <a href="{% url 'students:student_index' %}">Back to Student List</a>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>First Name:</th>
+            <td>{{ student.firstname }}</td>
+        </tr>
+        <tr>
+            <th>Last Name:</th>
+            <td>{{ student.lastname }}</td>
+        </tr>
+        <tr>
+            <th>Address:</th>
+            <td>{{ student.address }}</td>
+        </tr>
+        <tr>
+            <th>City:</th>
+            <td>{{ student.city }}</td>
+        </tr>
+        <tr>
+            <th>State:</th>
+            <td>{{ student.state }}</td>
+        </tr>
+        <tr>
+            <th>ZIP:</th>
+            <td>{{ student.zip }}</td>
+        </tr>
+        <tr>
+            <th>Phone:</th>
+            <td>{{ student.phone }}</td>
+        </tr>
+        <tr>
+            <th>Notes:</th>
+            <td>{{ student.notes }}</td>
+        </tr>
+    </table>
+    
+{% endblock %}
