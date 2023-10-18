@@ -1,5 +1,83 @@
 <!DOCTYPE html>
 <html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        margin: 10px; /* Adjust the margin size as needed */
+    }
+
+    table {
+        width: 100%;
+    }
+
+    p {
+        font-size: small;
+    }
+
+    ul {
+        margin-left: 20px;
+        list-style-type: square;
+        font-size: 14px;
+    }
+
+    .line-with-text {
+        margin: 10px; /* Margin around sub-headers */
+        display: flex;
+        align-items: center;
+    }
+
+    .line {
+        flex-grow: 1;
+        height: 2px;
+        background-color: #000;
+        margin: 0 10px;
+    }
+
+    .text {
+        white-space: nowrap; /* Prevent text from wrapping */
+        font-weight: 600;
+    }
+
+    .header-left {
+        font-size: large;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .header-right {
+        font-size: large;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .column-left {
+        text-align: left;
+    }
+
+    .column-right {
+        text-align: right;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .description {
+        /* font-family: 'Lucida Console', monospace; */
+    }
+
+    .name {
+        text-align: center;
+        font-weight: lighter;
+        font-stretch: expanded;
+    }
+</style>
 <head>
     <link rel="stylesheet" href="ResumeStyles.css">
 </head>
@@ -57,7 +135,7 @@
     <div class="line-with-text">
         <div class="line"></div>
         <div class="text">Technical Skills</div>
-        <div class "line"></div>
+        <div class="line"></div>
     </div>
     
     <div class="description">
@@ -75,6 +153,8 @@
                 Git, VSCode, Xcode, IntelliJ, Jupyter Notebooks
             </li>
         </ul>
+        
+        
     </div>
 
     <div class="line-with-text">
@@ -86,7 +166,7 @@
     <p class="description">
         Object-Oriented Programming, Data Structures and Algorithms, Software Engineering, 
         Computer Architecture, Internet Software Development, Operating Systems, 
-        Computer Systems Security, Practical Game Development, Assembly language
+        Computer Systems Security, Practical Game Development, Assembly Language
     </p>    
 
     <div class="line-with-text">
@@ -98,25 +178,42 @@
     <ul class="description">
         <li>
             <strong>Book Inventory Management System (MongoDB/Express/React/Node.js 
-            (MERN) Stack)</strong> - abc
+            (MERN) Stack)</strong> - Developed a comprehensive Book Inventory 
+            Management System utilizing React for the frontend and Express for 
+            the backend. Implemented a RESTful API and React components for 
+            book display and user interaction. Created an organized, responsive 
+            layout employing React Router for navigation.  Resulting in a 
+            user-friendly system enabling book Create/Read/Update/Delete (CRUD) 
+            operations and efficient inventory management.
         </li>
         <li>
-            <strong>CPU Emulator (C++)</strong> - abc
+            <strong>CPU Emulator (C++)</strong> - Developed an emulator featuring a 
+            pipelined architecture with cache modeling, hazard detection, and 
+            performance optimization (forwarding paths).
         </li>
         <li>
-            <strong>Shell Command Interpreter (C)</strong> - abc
+            <strong>Shell Command Interpreter (C)</strong> - Designed and implemented 
+            a custom Unix-like shell command interpreter, capable of executing commands 
+            and created pipes to handle input/output redirection.
         </li>
         <li>
-            <strong>Conway’s Game of Life (Java)</strong> - abc
+            <strong>Conway’s Game of Life (Java)</strong> - Wrote Conway's Game of Life 
+            using a loosely coupled class design and multi-threading (so that each cell 
+            could operate independently).
         </li>
         <li>
-            <strong>Thread Management (C)</strong> - abc
+            <strong>Thread Management (C)</strong> - Wrote a program to implement 
+            a MUTEX (binary semaphore) to designate when threads are allowed to 
+            run and to time tasks correctly.
         </li>
         <li>
-            <strong>Messaging System (Java)</strong> - abc
+            <strong>Messaging System (Java)</strong> - Implemented a publisher/subscriber 
+            design pattern to allow users to connect to a server-based chat system.
         </li>
         <li>
-            <strong>Diffie-Hellman Key Exchange (Python)</strong> - abc
+            <strong>Diffie-Hellman Key Exchange (Python)</strong> - Implemented 
+            cryptographic protocols, handled network communications and utilized 
+            encryption techniques for secure messaging (public key, private key).
         </li>
     </ul>
     
@@ -126,13 +223,15 @@
         <div class="line"></div>
     </div>
 
-    <p class="description">
-        <strong>Instrument Inventory (Python, SQL, Django)</strong> - abc
-    </p>
+    <li>
+        <strong>Instrument Inventory (Python, SQL, Django)</strong> - Currently 
+        working on a web based framework to store a SQL database to maintain the 
+        status of all students and instruments.
+    </li>
 
     <div class="line-with-text">
         <div class="line"></div>
-        <div class="text">Achievements</div>
+        <div class="text">Achievements & Affiliations</div>
         <div class="line"></div>
     </div>
 
